@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">EVSIM</string>
+    <string name="cycle">ЦИКЛ</string>
+    <string name="dis1">Амеба</string>
+    <string name="dis2">ЕДА</string>
+    <string name="title">Симуляция эволюции</string>
+    <string name="idea">Эволюция, пожалуй, один из самых захватывающих процессов в мире. Предлагаем сильно модернизировать игру “Жизнь” и разработать на этой основе мобильное приложение (Android). С его помощью можно будет созерцать, как происходит эволюция (изменяется генотип), приспособление к внешним условиям.</string>
+    <string name="but1">Start</string>
+</resources>
