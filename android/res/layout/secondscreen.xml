@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -32,8 +33,8 @@
         android:id="@+id/Ameba"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:contentDescription="@string/dis1"
-        app:srcCompat="@drawable/Ameba"
+
+
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="42dp"
         tools:layout_editor_absoluteY="133dp" />
@@ -43,7 +44,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:contentDescription="@string/dis2"
-        app:srcCompat="@drawable/food"
+
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="216dp"
         tools:layout_editor_absoluteY="222dp" />
@@ -52,16 +53,15 @@
         android:id="@+id/setting"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:contentDescription="@string/dis1"
         android:scaleType="centerCrop"
         android:src="@drawable/setting3"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/cycle"
-        app:layout_constraintHorizontal_bias="0.033"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.008"
-        tools:ignore="DuplicateSpeakableTextCheck"></ImageButton>
 
 
-</RelativeLayout>
+
+
+
+
+        tools:ignore="DuplicateSpeakableTextCheck" />
+
+
+   </RelativeLayout>
