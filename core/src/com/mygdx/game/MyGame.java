@@ -10,8 +10,8 @@ import com.mygdx.game.states.GameStateManage;
 import com.mygdx.game.states.MenuState;
 
 public class MyGame extends ApplicationAdapter {
-	public static final int WIDTH = 1080;
-	public static final int HEIGHT = 2220;
+	public static final int WIDTH = 2220;
+	public static final int HEIGHT = 1080;
 	public static final String TITLE = "ЭВОЛЮЦИЯ";
 	private GameStateManage gsm;
 	private SpriteBatch batch;
