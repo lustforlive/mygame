@@ -5,11 +5,11 @@ import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import java.util.Stack;
 
 public class GameStateManage {
-
+//управляет игровыми состояниями(окнами)
     private Stack<State> states;
 
 
-    public GameStateManage(){
+    public GameStateManage() {
         states = new Stack<State>();
     }
 

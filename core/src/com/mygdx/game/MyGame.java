@@ -15,21 +15,21 @@ public class MyGame extends ApplicationAdapter {
 	public static final String TITLE = "ЭВОЛЮЦИЯ";
 	private GameStateManage gsm;
 	private SpriteBatch batch;
-	Texture img;
+
 
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
 		gsm = new  GameStateManage();
 		gsm.push(new MenuState(gsm));
-		Gdx.gl.glClearColor(1, 0, 0, 1);
+
 	}
 
 	@Override
 
 	public void render () {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-		ScreenUtils.clear(1, 0, 0, 1);
+		//ScreenUtils.clear(1, 0, 0, 1);
 		gsm.update(Gdx.graphics.getDeltaTime());
 		gsm.render(batch);
 	}
@@ -37,6 +37,6 @@ public class MyGame extends ApplicationAdapter {
 	@Override
 	public void dispose () {
 		batch.dispose();
-		img.dispose();
+
 	}
 }
