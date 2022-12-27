@@ -1,11 +1,14 @@
 package com.mygdx.game.states;
 
+import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.GlyphLayout;
 import java.util.Stack;
 
 public class GameStateManage {
-//управляет игровыми состояниями(окнами)
+
+    public BitmapFont font;
+    //управляет игровыми состояниями(окнами)
     private Stack<State> states;
 
 
