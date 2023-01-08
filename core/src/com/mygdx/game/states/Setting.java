@@ -9,10 +9,10 @@ public class Setting extends State {
         super(gam);
     }
 
-    @Override
-    public void render(float dt) {
+   // @Override
+   // public void render(float dt) {
 
-    }
+  //  }
 
     @Override
     protected void handleInput() {
@@ -27,7 +27,7 @@ public class Setting extends State {
     }
 
     @Override
-    public void render(SpriteBatch sb) {
+    public void render(float delta) {
 
     }
 

@@ -1,8 +1,10 @@
 package com.mygdx.game.sprites;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 
-public abstract class Sprite {
+public class Sprite extends Actor {
     public double x;
     public double y;
     public Texture sprite;
@@ -13,4 +15,6 @@ public abstract class Sprite {
 
     }
 
+    public void draw(Batch batch) {
+    }
 }

@@ -2,6 +2,7 @@ package com.mygdx.game.sprites;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
@@ -11,12 +12,18 @@ import java.util.ArrayList;
 
 public class Ameba extends Protozoa  {
    ArrayList<Protozoa> arrayList;
+private Sprite ameba;
+    private Texture img;
 
-    private Texture ameba;
 
     public Ameba(int x, int y) {
         super(new Texture("ameba1.png"),10);
         Array<Protozoa> protozoas;
+        img= new Texture("ameba1.png");
+        img.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
+        ameba = new Sprite(img);
+
+
     }
     public void evolution(SpriteBatch sb){
 
@@ -32,7 +39,9 @@ public class Ameba extends Protozoa  {
         super(sprite, speed);
       //  this.ameba = ameba;
     }
+public void move(){
 
+}
 
     public void evolution() {
 
@@ -70,6 +79,15 @@ public class Ameba extends Protozoa  {
         int y1 = Gdx.input.getY();
         // arrayList.add(protozoa);
 
+    }
+
+    public void update(float dt) {
+    }
+
+    public void dispose() {
+    }
+    public void draw(Batch batch, float alpha) {
+        this.ameba.draw(batch);
     }
 
     //  public void amebax() {

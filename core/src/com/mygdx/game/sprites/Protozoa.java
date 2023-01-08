@@ -2,10 +2,11 @@ package com.mygdx.game.sprites;
 
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.scenes.scene2d.Actor;
 
 import java.util.Random;
 
-public class Protozoa extends Sprite {
+public class Protozoa extends Sprite{
     public static Random rand = new Random();
     public Vector2 vector = new Vector2(); // длина вектора равна 1(вектор нормализован)
     public double speed;
@@ -14,6 +15,7 @@ public class Protozoa extends Sprite {
 
 
     public Protozoa(Texture sprite, int speed) {
+       // super(actor);
         super(sprite);
         this.speed = speed;
 
