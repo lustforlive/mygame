@@ -3,21 +3,29 @@ package com.mygdx.game.sprites;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.scenes.scene2d.Actor;
+import com.mygdx.game.Tools.Point2D;
+import com.mygdx.game.Tools.Square;
 
 import java.util.Random;
 
 public class Protozoa extends Sprite{
     public static Random rand = new Random();
     public Vector2 vector = new Vector2(); // длина вектора равна 1(вектор нормализован)
-    public double speed;
+    public static double speed;
     public int width;
     public int height;
+    public static Point2D position;
+    public static float R;
+    Square bounds;
 
-
-    public Protozoa(Texture sprite, int speed) {
+    public Protozoa(Texture sprite,Point2D position , double speed, float R) {
        // super(actor);
         super(sprite);
         this.speed = speed;
+        this.position = new Point2D(position);
+        this.R=R;
+        this.bounds = new Square(position ,R);
+        vector=new Vector2(0,0);
 
     }
 

@@ -7,6 +7,8 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.math.Vector2;
 import com.badlogic.gdx.math.Vector3;
 import com.badlogic.gdx.utils.Array;
+import com.mygdx.game.MyGame;
+import com.mygdx.game.Tools.Point2D;
 
 import java.util.ArrayList;
 
@@ -17,7 +19,7 @@ private Sprite ameba;
 
 
     public Ameba(int x, int y) {
-        super(new Texture("ameba1.png"),10);
+        super(new Texture("ameba1.png"),Protozoa.position,Protozoa.speed,Protozoa.R);
         Array<Protozoa> protozoas;
         img= new Texture("ameba1.png");
         img.setFilter(Texture.TextureFilter.Linear, Texture.TextureFilter.Linear);
@@ -35,8 +37,8 @@ private Sprite ameba;
         }
     }
 
-    public Ameba(Texture sprite, int speed) {
-        super(sprite, speed);
+    public Ameba(Texture sprite) {
+        super(sprite, position,speed,R);
       //  this.ameba = ameba;
     }
 public void move(){
@@ -81,13 +83,19 @@ public void move(){
 
     }
 
-    public void update(float dt) {
+    public void update() {
+        if (position.getX()+R > MyGame.WIDTH)position.setX(MyGame.WIDTH-R);
+        if (position.getY() +R > MyGame.HEIGHT)position.setY(MyGame.HEIGHT-R);
+        if (position.getX()+R <  0)position.setX(R);
+        if (position.getY() +R < 0)position.setY(R);
+        position.move() ;
     }
 
     public void dispose() {
     }
-    public void draw(Batch batch, float alpha) {
-        this.ameba.draw(batch);
+    public void draw(SpriteBatch batch) {
+
+        batch.draw(img,position.getX() -R,position.getY()-R);
     }
 
     //  public void amebax() {

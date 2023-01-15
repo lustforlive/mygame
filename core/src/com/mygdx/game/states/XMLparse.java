@@ -1,4 +1,4 @@
-package com.mygdx.game.sprites;//package ru.sayakhov.songs_of_the_space.objects;
+package com.mygdx.game.states;//package ru.sayakhov.songs_of_the_space.objects;
 
 import java.io.IOException;
 import java.util.HashMap;

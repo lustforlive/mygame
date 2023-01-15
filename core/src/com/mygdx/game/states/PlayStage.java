@@ -1,4 +1,4 @@
-package com.mygdx.game.sprites;//package ru.sayakhov.songs_of_the_space.objects;
+package com.mygdx.game.states;//package ru.sayakhov.songs_of_the_space.objects;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input.Keys;
@@ -29,9 +29,12 @@ public class PlayStage extends Stage {
                 getHardKeyListener().onHardKey(keyCode, 0);
         }
         return super.keyUp(keyCode);
-    }   
-	
-	public interface OnHardKeyListener{
+    }
+
+  //  public void addActor(Ameba i) {
+   // }
+
+    public interface OnHardKeyListener{
         /**
          * Happens when user press hard key 
          * @param keyCode Back or Menu key (keyCode one of the constants in Input.Keys)
