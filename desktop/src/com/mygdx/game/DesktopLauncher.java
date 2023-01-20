@@ -7,12 +7,12 @@ import com.mygdx.game.MyGame;
 // Please note that on macOS your application needs to be started with the -XstartOnFirstThread JVM argument
 public class DesktopLauncher {
 	public static void main (String[] arg) {
+		//Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
 		Lwjgl3ApplicationConfiguration config = new Lwjgl3ApplicationConfiguration();
-		config.setForegroundFPS(60);
-		config.setTitle("ЭВОЛЮЦИЯ");
 		config.setWindowedMode(MyGame.HEIGHT, MyGame.WIDTH);
 		config.useVsync(false);
-
+		config.setForegroundFPS(60);
+		config.setTitle("MyGame");
 		new Lwjgl3Application(new MyGame(), config);
 	}
 }

@@ -6,34 +6,24 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.scenes.scene2d.InputEvent;
-import com.badlogic.gdx.scenes.scene2d.Stage;
-import com.badlogic.gdx.scenes.scene2d.ui.Label;
-import com.badlogic.gdx.scenes.scene2d.ui.Skin;
-import com.badlogic.gdx.scenes.scene2d.ui.Table;
-import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
-import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.mygdx.game.MyGame;
 //import com.sun.imageio.plugins.jpeg.JPEGImageWriter;
 
 public class MenuState implements Screen {
-    // final GameStateManage game;
+;
    // public SpriteBatch sb;
      MyGame game;
-    private TextButton play, exit;
-    private Table table;
-    private Label.LabelStyle labelStyle;
-    private Texture background;
 
-    private Texture playbutton;
-    private Stage stage;
+    private final Texture background;
 
-    public MenuState(final MyGame game) {
+    private final Texture playbutton;
+
+
+    public MenuState( MyGame game) {
         // super(gam);
         this.game = game;
-
+        background = new Texture("black.jpeg");
+        playbutton = new Texture("button.png");
         // super(gsm);
        /* this.stage.addActor(game.background);
 
@@ -118,16 +108,20 @@ public class MenuState implements Screen {
 
     }
 
-    @Override
+
         public void render (float delta){
         Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-         game.batch.begin();
+         MyGame.batch.begin();
          if (Gdx.input.justTouched()){
 
+            this.game.setScreen(new PlayState());
          }
-         game.batch.draw(game.img,0,0);
-         game.batch.end();
+         MyGame.batch.begin();
+         MyGame.batch.draw(MyGame.img,0,0);
+         MyGame.batch.draw(background,0,0);
+         MyGame.batch.draw(playbutton,MyGame.WIDTH/2,MyGame.HEIGHT/2);
+         MyGame.batch.end();
 
            // this.stage.act(delta);
             //this.stage.draw();
@@ -158,7 +152,7 @@ public class MenuState implements Screen {
 
     @Override
         public void dispose () {
-        this.stage.dispose();
+
         this.game.dispose();
 
 
@@ -169,5 +163,11 @@ public class MenuState implements Screen {
                 game.setScreen( new PlayState());
             }
         }
+    public void draw(SpriteBatch batch) {
+       batch.begin();
+       MyGame.batch.draw(background,0,0);
+       batch.end();
+    }
+
 
     }

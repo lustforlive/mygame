@@ -22,7 +22,6 @@ public class PlayState implements Screen {
      MyGame game;
     private Ameba ameba;
 
-   private PlayStage stage;
 
 
     public Random rand;
@@ -41,9 +40,9 @@ public int speed =10;
         //super(gsm);
         this.game = game;
         //batch = new SpriteBatch();
-        stage = new PlayStage(new ScreenViewport());
+        //.. stage = new PlayStage(new ScreenViewport());
         ameba = new Ameba(50, 300);
-        stage.addActor(game.background);
+        //stage.addActor(game.background);
 
     }
     protected void handleInput() {
@@ -73,8 +72,8 @@ public int speed =10;
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 
-        stage.act(delta);
-        stage.draw();
+       // stage.act(delta);
+       // stage.draw();
     }
 
     @Override

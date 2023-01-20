@@ -13,26 +13,26 @@ public class GameStateManage {
 
 
     public GameStateManage() {
-   //     states = new Stack<State>();
+       states = new Stack<State>();
     }
 
     public void push(State state){
-  //      states.push(state);
+        states.push(state);
     }
 
     public void pop(){
-   //     states.pop().dispose();
+       states.pop().dispose();
     }
 
     public void set(State state){
-   //     states.pop().dispose();
-     //   states.push(state);
+       states.pop().dispose();
+       states.push(state);
     }
     public void update(float dt){
-    //    states.peek().update(dt);
+       states.peek().update(dt);
     }
 
     public void render(float delta){
-   //     states.peek().render(delta);
+       states.peek().render(delta);
     }
 }
